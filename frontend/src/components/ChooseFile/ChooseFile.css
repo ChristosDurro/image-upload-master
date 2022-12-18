@@ -1,0 +1,21 @@
+
+
+.choose-file-container {
+    margin: 20px 0 30px;
+}
+
+.choose-label {
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: #2F80ED;
+    color: #fff;
+}
+
+.choose-label:hover {
+    background: #2a6ec7;
+    cursor: pointer;
+}
+
+.choose-btn {
+    display: none;
+}

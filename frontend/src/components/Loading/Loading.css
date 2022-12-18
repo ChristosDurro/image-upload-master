@@ -1,0 +1,13 @@
+.container {
+    width: 25%;
+}
+
+.uploading-header {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 75%;
+    margin: auto;
+}
