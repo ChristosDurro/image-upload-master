@@ -5,10 +5,12 @@ const multer = require("multer");
 const fs = require("fs");
 const dbConnection = require("./controllers/db");
 const ImgModel = require("./models/image");
+const path = require("path");
 
 require("dotenv").config();
 
 app.use(cors());
+app.use(express.static(__dirname));
 
 port = process.env.PORT || 8000;
 
@@ -18,7 +20,7 @@ dbConnection(process.env.DATABASE_URL);
 // Multer Storage Config
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "../backend/uploads");
+    cb(null, path.join(__dirname, "/uploads"));
   },
   filename: (req, file, cb) => {
     //null as first arg means no error
