@@ -28,6 +28,11 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+// Main route to show error and what api endpoint to use
+app.get("/", (req, res) => {
+  res.send("Invalid API Endpoint!");
+});
+
 // Retrieve Image Uploaded and Show it
 app.get("/preview/:id", (req, res) => {
   ImgModel.findById(req.params.id, (err, result) => {

@@ -28,7 +28,7 @@ const PreviewImage = () => {
   useEffect(() => {
     const retrieveImage = (id) => {
       axios
-        .get(`http://localhost:8000/preview/${id}`, id)
+        .get(`https://image-upload-master.onrender.com/preview/${id}`, id)
         .then((res) => setImageRetrieved(res.data))
         .catch((err) => console.log(err));
     };

@@ -39,7 +39,11 @@ const Home = () => {
       };
 
       axios
-        .post("http://localhost:8000/upload", formData, config)
+        .post(
+          "https://image-upload-master.onrender.com/upload",
+          formData,
+          config
+        )
         .then((res) => {
           console.log(res.data);
           setUploadDone(true);
