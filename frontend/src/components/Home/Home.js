@@ -45,8 +45,7 @@ const Home = () => {
           console.log(res.data);
           setUploadDone(true);
           navigate({
-            pathname: "/preview",
-            search: `?id=${res.data._id}`,
+            pathname: `/preview/${res.data._id}`,
           });
         })
         .catch((err) => console.log(err));

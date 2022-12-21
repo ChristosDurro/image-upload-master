@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./PreviewImage.css";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useParams } from "react-router-dom";
 import axios from "axios";
 import { Buffer } from "buffer";
 
@@ -9,7 +9,6 @@ const PreviewImage = () => {
   const [copied, setCopied] = useState(false);
   const [buttonColor, setButtonColor] = useState("#2F80ED");
   const [imageRetrieved, setImageRetrieved] = useState(null);
-  const [searchParams] = useSearchParams();
   let img;
 
   // Convert Data Buffer From Database to Image
@@ -22,7 +21,7 @@ const PreviewImage = () => {
     window.location.replace("/");
   };
 
-  const id = searchParams.get("id");
+  const id = useParams().id;
 
   // Retrieving Image Uploaded From Database
   useEffect(() => {
@@ -58,7 +57,10 @@ const PreviewImage = () => {
       />
       <h2 className="success">Uploaded Successfully!</h2>
       <div className="img-preview">
-        <img src={`data:image/png;base64,${img}`} alt="preview-image" />
+        <img
+          src={`data:image/png;base64,${img}`}
+          alt={imageRetrieved ? imageRetrieved.name : "preview"}
+        />
       </div>
       <div className="copy-link">
         <input
