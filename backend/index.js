@@ -47,7 +47,7 @@ app.post("/upload", upload.single("image"), async (req, res) => {
   const saveImage = new ImgModel({
     name: req.file.filename,
     image: {
-      data: fs.readFileSync("../backend/uploads/" + req.file.filename),
+      data: fs.readFileSync("uploads/" + req.file.filename),
       contentType: "image/png",
     },
   });
