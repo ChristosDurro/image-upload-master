@@ -18,7 +18,7 @@ dbConnection(process.env.DATABASE_URL);
 // Multer Storage Config
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads");
+    cb(null, "../backend/uploads");
   },
   filename: (req, file, cb) => {
     //null as first arg means no error
@@ -47,7 +47,7 @@ app.post("/upload", upload.single("image"), async (req, res) => {
   const saveImage = new ImgModel({
     name: req.file.filename,
     image: {
-      data: fs.readFileSync("uploads/" + req.file.filename),
+      data: fs.readFileSync("../backend/uploads/" + req.file.filename),
       contentType: "image/png",
     },
   });

@@ -12,6 +12,7 @@ const Home = () => {
   const [imageDetails, setImageDetails] = useState(null);
   const [uploadDone, setUploadDone] = useState(false);
   const [progress, setProgress] = useState(0);
+  const backendURL = "https://image-upload-master.onrender.com";
 
   const navigate = useNavigate();
 
@@ -39,11 +40,7 @@ const Home = () => {
       };
 
       axios
-        .post(
-          "https://image-upload-master.onrender.com/upload",
-          formData,
-          config
-        )
+        .post(`${backendURL}/upload`, formData, config)
         .then((res) => {
           console.log(res.data);
           setUploadDone(true);
