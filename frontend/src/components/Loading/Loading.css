@@ -1,5 +1,13 @@
-.container {
+.uploading-container {
     width: 25%;
+    margin: 10% auto;
+    border: 1px solid #F6F8FB;
+    border-radius: 34px;
+    background-color: white;
+    box-shadow: 1px 5px 10px #0000001a;
+    padding: 50px 25px;
+    text-align: center;
+
 }
 
 .uploading-header {
@@ -11,3 +19,16 @@
     width: 75%;
     margin: auto;
 }
+
+@media (max-width: 1024px) {
+    .uploading-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 425px) {
+    .uploading-container {
+        width: 75%;
+    }
+}
+

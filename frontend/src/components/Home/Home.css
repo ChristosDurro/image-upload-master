@@ -2,7 +2,6 @@
 
 .container {
     width: 25%;
-    height: auto;
     background-color: white;
     margin: 10% auto;
     border: 1px solid #F6F8FB;
@@ -48,4 +47,19 @@
   
   .credits a:hover {
     color: #8d8c8c;
+  }
+  
+    @media (max-width: 1024px) {
+      .container {
+        width: 50%;
+      }
+    }
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 75%;
+    }
+    .credits {
+      font-size: 12px;
+    }
   }

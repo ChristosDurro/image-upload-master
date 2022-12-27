@@ -90,3 +90,32 @@
     background-color: #2a6ec7;
     cursor: pointer;
 }
+
+
+@media (max-width: 1024px) {
+    .preview-container {
+        width: 25%;
+    }
+}
+
+
+@media (max-width: 789px)  {
+    .preview-container {
+        width: 40%;
+    }
+}
+
+@media (max-width: 639px)  {
+    .preview-container {
+        width: 50%;
+    }
+}
+
+
+
+@media (max-width: 425px) {
+    .preview-container {
+        width: 75%;
+    }
+}
+
