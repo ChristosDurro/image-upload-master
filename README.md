@@ -66,20 +66,18 @@ User story: I can choose to copy to the clipboard
 
 ## How To Use
 
-<!-- Example: -->
-
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
 $ git clone https://github.com/ChristosDurro/image-upload-master.git
 
-# Install dependencies
-$ npm install
-
 # Go inside both frontend and backend folders
 $ cd backend
 $ cd frontend
+
+# Install dependencies
+$ npm install
 
 # Run the app
 $ npm start
@@ -87,5 +85,5 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
 - GitHub [@ChristosDurro](https://github.com/ChristosDurro)
+- Email [xristosdurros@hotmail.com]
